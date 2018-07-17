@@ -1,11 +1,168 @@
-
-.formStyle{
-  margin-top: 50px;
-  box-shadow: -7px 0 34px #ccc;
-  padding: 12px;
-  border-radius: 7px;
-  border: 1px solid #ccc;
+body{
+  background:#fbfbfb  url(..../../assets/img/signin-bg.png) no-repeat center center;
+  background-size: cover;
 }
+.mrgin-20 {
+    margin-top: 15px;
+    color: #999;
+    font-size: 21px;
+}
+.text-cont {
+    width: 86%;
+    margin: 39px auto;
+}
+.itemscope {
+    background: #f9f9f9;
+    -webkit-box-shadow: -2px 0 15px #ccc;
+    box-shadow: -2px 0 15px #ccc;
+    border-radius: 20px;
+}
+.text-cont h2 {
+    color: #BB1E05;
+    font-weight: normal;
+    font-size: 33px;
+    line-height: 49px;
+    font-family: monospace;
+}
+a.continue-btn {
+    background: #999;
+    padding: 8px 25px;
+    font-size: 13px;
+    border-radius: 8px;
+    margin-top: 6px;
+}
+
+a.continue-btn:hover{ background:#666; }
+
+.text-cont p {
+    color: #999;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: monospace;
+    margin-bottom: 40px;
+}
+
+.newheader-bg .MuiAppBar-colorPrimary-7 {
+    background-color: #36a8d3!important;
+}
+
+.img-cont {
+    height: 251px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+.step-by img {
+    border-radius: 100%;
+    float: left;
+    margin: 15px 10px 0 12px;
+}
+.post-widget.poster img {
+    width: 100%;
+}
+.step-by {
+    border-top: 1px solid #edeaed;
+    padding: 9px 8px;
+}
+.step-by h4 {
+    color: #BB1E05;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: normal;
+}
+
+.img-cont {
+    height: 251px;
+    overflow: hidden;
+}
+.itemscope img {
+    width: 100%;
+}
+.dash-container {
+    margin: 45px auto 0;
+    width: 1100px;
+}
+h3.post-head {
+    padding: 16px 0 35px 15px;
+    color: #666;
+    font-weight: normal;
+    margin: 10px 0 0 0;
+    font-size: 21px;
+}
+.post-widget {
+    background: #fff;
+    border: 1px solid #f9f9f9;
+    box-shadow: 0px -1px 7px #ccc;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin-bottom: 45px;
+}
+
+
+
+.form-widget {
+    background: #fff;
+    margin-top: 70px;
+    box-shadow: 0px 4px 6px 0px #ccc;
+    border: 1px solid #ccc;
+}
+
+.lightcolor > div:before {
+    border-bottom: 1px solid #ccc;
+}
+
+.logo-sign {
+    background: #36a8d2 url(..../../assets/img/signin_logo.png) no-repeat center center;
+    padding: 0;
+    height: 65px;
+    margin: 0px;
+}
+
+.width100 input{
+      font-size: 14px;
+      padding: 0 0 14px 0;
+  }
+
+a.signup {
+    color: #36abd9;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    margin: 20px 0 0 0;
+}
+
+.signbtn {
+    color: #fff;
+    background-color: #34add6!important;
+    border-radius: 0px!important;
+    margin: 5px auto 0!important;
+    display: block!important;
+    width: 150px;
+    height: 38px;
+    -webkit-box-shadow: 0 1px 6px 0px #ccc!important;
+    box-shadow: 0 1px 6px 0px #ccc!important;
+    font-size: 14px!important;
+    font-weight: normal!important;
+}
+
+
+.MuiButton-containedPrimary-134.signbtn:hover {
+    background-color: #34add6;
+}
+
+.check-color .check-tick{
+    color: #a4a3a3!important;
+}
+
+.formStyle {
+    padding:14px 31px 20px;
+}
+.lightcolor > div:hover:not(.MuiInput-disabled-104):not(.MuiInput-focused-103):not(.MuiInput-error-106):before {
+    border-bottom: 1px solid #36acd3!important;
+}
+.lightcolor > div:after {
+    border-bottom: 1px solid #36acd3!important;
+}
+
 .width100 { width:100%; display: block }
           
 a{ color: #fff; text-decoration: none }

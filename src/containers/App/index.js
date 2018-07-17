@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route, Switch,BrowserRouter,Redirect } from 'react-router-dom'
-import Home from '../../containers/Home'
 import Login from '../../containers/Login'
 import Signup from '../../containers/Signup'
 import Dashboard from '../../containers/Dashboard'
@@ -17,8 +16,7 @@ const AuthRoute = ({ component: Component, ...rest }) => (
     checkAuth() ? (
       <Component {...props}/>
     ) : (
-      <Redirect to={{ pathname: '/'}} />
-
+      <Redirect to={{ pathname: '/Login'}} />
     )
   )}/>
 )
@@ -26,7 +24,7 @@ const AuthRoute = ({ component: Component, ...rest }) => (
 const PublicRoute = ({ component: Component, ...rest }) => (
    <Route {...rest} render={props => {
     return checkAuth() ? (
-      <Redirect to={{ pathname: `/dashboard` }} />
+      <Redirect to={{ pathname: `/` }} />
     ) :
       (
         <Component {...props} />
@@ -41,11 +39,10 @@ export default class App extends Component {
 		return (
 				<div>
 					<BrowserRouter>
-						<Switch>							
-							<PublicRoute exact path="/" component={Home} />
+						<Switch>
 							<PublicRoute path="/Login" component={Login} />
 							<PublicRoute path="/Signup" component={Signup} />
-							<AuthRoute path="/Dashboard" component={props=><Dashboard {...props} />} />
+							<AuthRoute path="/" component={props=><Dashboard {...props} />} />
 						</Switch>
 					</BrowserRouter>					 
 				</div>

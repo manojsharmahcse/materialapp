@@ -48,56 +48,80 @@ class Signup extends Component {
 
 		return (
 
-				<div className="container">
-				<Nav />
+			<div className="container">
 
 				<Grid container spacing={24}>
 			        <Grid item xs={4}></Grid>
 			        <Grid item xs={4}>
-			        	<form className="formStyle">
+			        	<div className="form-widget">
 
-						     <TextField
-						          id="name"
-						          label="Name"
-						          className="width100 textField"
-						          margin="normal"
-						           onChange={this.onChange.bind(this,'username')}
-						        />
+			           		<h3 className="logo-sign"></h3>
 
-						      <TextField
-						          id="name"
-						          label="Email Address"
-						           type="email"
-						          className="width100 textField"
-						          margin="normal"
-						          onChange={this.onChange.bind(this,'email')}
-						        />  
+			        	      <form className="formStyle">
+								<Grid container spacing={24}> 
+						    	   <Grid item xs={1}>					    	   			
+										<i class="material-icons mrgin-20">
+											account_box
+										</i>
+									</Grid>
+						        		<Grid item xs={11}>									     	
+									        <TextField
+									          id="uncontrolled"
+									          defaultValue="User Name"
+									          type="text"
+									          margin="normal"
+									          className="width100 textField lightcolor"
+									        />
+								     </Grid>
+								</Grid> 
+								<Grid container spacing={24}> 
+						    	   <Grid item xs={1}><i class="material-icons mrgin-20">email</i></Grid>
+								   	 <Grid item xs={11}>
+									         <TextField
+									          id="uncontrolled"
+									          defaultValue="Email Address"
+									          type="email"
+									          margin="normal"
+									          className="width100 textField lightcolor"
+									        />
+							     	</Grid>
+ 								 </Grid>
 
-						      <TextField
-						          id="password-input"
-						          label="Password"
-						          className="width100 textField"
-						          type="password"
-						          autoComplete="current-password"
-						          margin="normal"
-						          onChange={this.onChange.bind(this,'password')}
-						        />
+ 								 <Grid container spacing={24}> 
+						    	   <Grid item xs={1}><i class="material-icons mrgin-20">lock</i></Grid>
+								   	<Grid item xs={11}>								     
+								         <TextField
+									          id="uncontrolled"
+									          defaultValue="password"
+									          type="password"
+									          margin="normal"
+									          className="width100 textField lightcolor"
+									    />							   
+ 									</Grid>
+								 </Grid>
 
-						        <TextField
-						          id="password-input"
-						          label="Confirm Password"
-						          className="width100 textField"
-						          type="password"
-						          autoComplete="current-password"
-						          margin="normal"
-						          onChange={this.onChange.bind(this,'confirm_password')}
-						        />
+								  <Grid container spacing={24}> 
+						    	   <Grid item xs={1}><i class="material-icons mrgin-20">lock</i></Grid>
+								   	<Grid item xs={11}>								        
+								         <TextField
+									          id="uncontrolled"
+									          defaultValue="password"
+									          type="password"
+									          margin="normal"
+									          className="width100 textField lightcolor"
+									    />	
+								    </Grid>
+								 </Grid>
 
-						        <Button variant="contained" color="primary" className="button" onClick={this.onSubmit}>
-							        Sign in
+						        <Button variant="contained" color="primary" className="button signbtn" onClick={this.onSubmit}>
+							        Sign Up
 							    </Button>
 
-						    </form>   
+							     <a href="/Login" className="signup">Login</a>
+
+						    </form> 
+
+						</div>
 			        </Grid>
 			        <Grid item xs={4}></Grid>
 			    </Grid>			

@@ -11,6 +11,11 @@ import Icon from '@material-ui/core/Icon';
 import SaveIcon from '@material-ui/icons/Save';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+
+import CheckBoxIcon from '@material-ui/icons/CheckBox';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+
 import '../../App.css'
 
 class Signin extends Component {
@@ -40,7 +45,7 @@ class Signin extends Component {
 		this.props.dispatch(loginAction(this.state.signin)).then(res => {
 			console.log(res,6666)
 			if(res.data && res.data.token){
-				this.props.history.push('/dashboard')
+				this.props.history.push('/')
 			}
 		})
 
@@ -51,41 +56,68 @@ class Signin extends Component {
 
 		return (
 
-				<div className="container">
-
-				<Nav />
+				<div className="container signbg">			
 
 				<Grid container spacing={24}>
 			        <Grid item xs={4}></Grid>
 			        <Grid item xs={4}>
-			        	<form className="formStyle">
+			           <div className="form-widget">
 
-						      <TextField
-						          id="name"
-						          label="Email Address"
-						           type="email"
-						          className="width100 textField"
-						          margin="normal"
-						          onChange={this.onChange.bind(this,'email')}
-						        />  
+			           		<h3 className="logo-sign"></h3>
 
-						      <TextField
-						          id="password-input"
-						          label="Password"
-						          className="width100 textField"
-						          type="password"
-						          autoComplete="current-password"
-						          margin="normal"
-						           onChange={this.onChange.bind(this,'password')}
+			        	 <form className="formStyle">
+
+			        	 	<Grid container spacing={24}> 
+						       <Grid item xs={1}><i class="material-icons mrgin-20">email</i></Grid>
+						        <Grid item xs={11}>
+							         <TextField
+							          id="uncontrolled"
+							          defaultValue="Email Address"
+							          type="email"
+							          margin="normal"
+							          name="email"
+							          className="width100 textField lightcolor"
+							          onChange={this.onChange.bind(this,'email')}
+							        />
+							     </Grid>
+							  </Grid>
+							    <Grid container spacing={24}> 
+							  		<Grid item xs={1}><i class="material-icons mrgin-20">lock</i></Grid>
+							  		  <Grid item xs={11}>
+								        <TextField
+								          id="uncontrolled"
+								          defaultValue="Password"
+								           name="password"
+								          type="Password"
+								          margin="normal"
+								          className="width100 textField lightcolor"
+								          onChange={this.onChange.bind(this,'password')}
+								        />
+								       </Grid>
+								</Grid>
+
+						        <FormControlLabel
+						          control={
+						            <Checkbox
+						              value="checkedB"
+						              color="primary"
+						              className="check-tick"
+						            />
+						          }
+						          label="remember me"
+						          className="check-color"
 						        />
 
 						        <Button variant="contained" 
 						         onClick={this.onSubmit} 
-						         color="primary" className="button">
-							        Sign up
+						         color="primary" className="button signbtn">
+							        Sign in
 							    </Button>
 
+							    <a href="/Signup" className="signup">Register Now</a>
+
 						    </form>   
+						 </div>
 			        </Grid>
 			        <Grid item xs={4}></Grid>
 			    </Grid>		

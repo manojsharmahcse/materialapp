@@ -17,7 +17,7 @@ export default class DashboradNav extends Component {
 	render(){
 
 		return (
-			<div>
+			<div className="newheader-bg">
 				 <AppBar position="static">
 		        <Toolbar>
 		          <IconButton color="inherit" aria-label="Menu">
