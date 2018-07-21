@@ -29,6 +29,9 @@ class Signup extends Component {
 		}
 	}
 
+	onClick = () => {
+		this.props.history.push(`/Login`);
+	}
 
 	onChange = (key, event) =>{
 		console.log(key,event,777);
@@ -117,8 +120,9 @@ class Signup extends Component {
 							        Sign Up
 							    </Button>
 
-							     <a href="/Login" className="signup">Login</a>
-
+								<button type="button" onClick={this.onClick} className="signup">
+									Login
+							    </button>
 						    </form> 
 
 						</div>

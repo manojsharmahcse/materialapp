@@ -30,11 +30,15 @@ class Signin extends Component {
 		}
 	}
 
+	onClick = () => {
+		this.props.history.push(`/Signup`);
+	}
+
+
 	onChange = (key, event) =>{
 		console.log(key,event,777);
 		const {signin} = this.state;
 		signin[key] = event.target.value;
-
 		this.setState({signin})
 
 	}
@@ -68,11 +72,13 @@ class Signin extends Component {
 			        	 <form className="formStyle">
 
 			        	 	<Grid container spacing={24}> 
-						       <Grid item xs={1}><i class="material-icons mrgin-20">email</i></Grid>
+						       <Grid item xs={1}>
+						       		<i class="material-icons mrgin-20">email</i>
+						       	</Grid>
 						        <Grid item xs={11}>
 							         <TextField
 							          id="uncontrolled"
-							          defaultValue="Email Address"
+							          placeholder="Email Address"
 							          type="email"
 							          margin="normal"
 							          name="email"
@@ -86,7 +92,7 @@ class Signin extends Component {
 							  		  <Grid item xs={11}>
 								        <TextField
 								          id="uncontrolled"
-								          defaultValue="Password"
+								          placeholder="Password"
 								           name="password"
 								          type="Password"
 								          margin="normal"
@@ -113,9 +119,8 @@ class Signin extends Component {
 						         color="primary" className="button signbtn">
 							        Sign in
 							    </Button>
-
-							    <a href="/Signup" className="signup">Register Now</a>
-
+							    <button type="button" onClick={this.onClick} className="signup">Register Now
+							    </button>	
 						    </form>   
 						 </div>
 			        </Grid>

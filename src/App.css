@@ -122,12 +122,20 @@ h3.post-head {
       padding: 0 0 14px 0;
   }
 
-a.signup {
+button.signup {
     color: #36abd9;
     text-align: center;
     margin: 0 auto;
     display: block;
-    margin: 20px 0 0 0;
+    margin: 20px auto 0;
+    border: none;
+    background: none;
+    text-align: center;
+    display: block!important;
+    font-size: 17px;
+}
+button.signup:focus{
+   border:none!important; 
 }
 
 .signbtn {

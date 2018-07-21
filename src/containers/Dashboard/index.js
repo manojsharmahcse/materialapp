@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch,BrowserRouter,Redirect } from 'react-router-dom'
+import { Route, Switch,BrowserRouter,Redirect,Link } from 'react-router-dom'
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -11,6 +11,10 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import Home from './Home'
+import About from './About'
+import Contact from './Contact'
+
 
 import blog from '../../assets/img/blog-1.jpg';
 
@@ -112,6 +116,14 @@ export default class App extends Component {
 					 </Grid>
 
 				</div>
+
+				<Link to="/">Home</Link><br />
+				<Link to="/about">About</Link><br />
+				<Link to="/contact">Contact</Link>
+
+				<Route exact path="/home" component={Home} />
+				<Route exact path="/about" component={About} />
+				<Route exact path="/contact" component={Contact} />
 
 			</div>
 
